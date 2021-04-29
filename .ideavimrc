@@ -1,0 +1,21 @@
+source ~/.vimrc
+
+" basic stuff
+set hlsearch
+set showmode
+set incsearch
+set clipboard+=unnamed
+set relativenumber
+set visualbell
+
+" extensions
+set surround
+set multiple-cursors
+set highlightedyank
+set commentary
+set ReplaceWithRegister
+set easymotion
+
+" register leader
+let mapleader = " "
+

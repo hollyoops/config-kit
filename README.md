@@ -1,1 +1,3 @@
 # configKit
+
+IDE Settings

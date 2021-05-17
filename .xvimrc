@@ -83,16 +83,14 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
-" 纵向窗口
-nmap <C-\> <C-w>v
 " 关闭窗口
 nmap <C--> <C-w>q
 " ctrl+a / H 行首
-nnoremap <C-a> ^
+" nnoremap <C-a> ^
 noremap H ^
 " nnoremap ^ <nop>
 " ctrl+e / L 行尾
-nnoremap <C-e> $
+" nnoremap <C-e> $
 noremap L $
 " nnoremap $ <nop>
 " yL复制到行尾
@@ -108,8 +106,6 @@ nmap ,k a <ESC>a <ESC>h
 nnoremap <CR> o<ESC>
 " shift+enter 插入新行(光标上)
 nnoremap <S-CR> O<ESC>
-" 行选择模式
-nnoremap vv V
 " 快速跳到{ (代码展开折叠时要定位到{}上才行)
 noremap { f{
 "ctrl+,转到最上一次编辑位置
@@ -263,7 +259,7 @@ noremap ,cf <D-a>:xccmd indentSelection<CR>
 " 代码块
 map ,cs :xcmenucmd Show Code Snippet Library<CR>
 " 提示提示气泡
-"map ,he :xcmenucmd Quick Help for Selected Item<CR>
+map gh :xcmenucmd Show Quick Help for Selected Item<CR>
 " 帮助
 map ,hi :xcmenucmd Show Quick Help Inspector<CR>
 " 文件
@@ -276,25 +272,23 @@ map ,tj :xccmd toggleDebuggerVisibility<CR>
 map ,tl :xccmd toggleUtilitiesVisibility<CR>
 " 调试面板
 map ,dc :xcmenucmd Activate Console<CR>
-" .h/.m文件切换
-map ,n :xccmd jumpToNextCounterpart<CR>
 " 显示当前类所有方法
 map ,g :xccmd showDocumentItemsMenu<CR>
 map ,li :xccmd showDocumentItemsMenu<CR>
 " 后退
-map ,b :xccmd goBackInHistoryByCommand<CR>
+map <D-[> :xccmd goBackInHistoryByCommand<CR>
 " 前进
-map ,f :xccmd goForwardInHistoryByCommand<CR>
+map <D-]> :xccmd goForwardInHistoryByCommand<CR>
 " 定位到项目导航
 map ,pr :xccmd revealInProjectNavigator<CR>
 " 折叠
-nnoremap ,zz :xccmd fold<CR>
+nnoremap zc :xccmd fold<CR>
 " 展开
-nnoremap ,za :xccmd unfold<CR>
+nnoremap zo :xccmd unfold<CR>
 " 展开全部
-nnoremap <C-z> :xccmd unfoldAll<CR>
+nnoremap zR :xccmd unfoldAll<CR>
 " 折叠全部
-map ,ma :xccmd foldAllMethods<CR>
+map zM :xccmd foldAllMethods<CR>
 " 展开全部
 map ,ua :xccmd unfoldAllMethods<CR>
 " 在workspace中搜索
@@ -308,15 +302,3 @@ map ,q  :xccmd closeDocument<CR>
 " 注释
 map ,cm  :xccmd addDocumentation<CR>
 " )>
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About

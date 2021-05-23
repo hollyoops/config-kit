@@ -19,3 +19,5 @@ set easymotion
 " register leader
 let mapleader = " "
 
+nnoremap gh :action QuickJavaDoc<CR>
+nnoremap ge :action ShowErrorDescription<CR>

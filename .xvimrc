@@ -230,8 +230,8 @@ map ,w :w<CR>
 
 " Xcode CMD MAPPING <(
 " 注释
-noremap gcc :xcmenucmd Toggle Comments<CR>
-vnoremap gc :xcmenucmd Toggle Comments<CR>
+noremap gcc :xcmenucmd Comment Selection<CR>
+vnoremap gc :xcmenucmd Comment Selection<CR>
 " 定位行(cmd+l / ,l / 10gg / :10)
 map ,l  :xccmd openQuicklyScoped<CR>
 " 快速打开(cmd+shift+o)

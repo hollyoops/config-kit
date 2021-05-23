@@ -74,10 +74,6 @@ nnoremap <tab> %
 " 自动换行时不跳过
 " nnoremap j gj
 " nnoremap k gk
-" J 下移5行
-nmap <S-J> 5j
-" K 上移5行
-nmap <S-K> 5k
 " ctrl+h/j/k/l 窗口切换活动
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j

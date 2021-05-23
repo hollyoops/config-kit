@@ -175,7 +175,7 @@ inoremap <C-u> <ESC>ui
 " 选中全部
 nnoremap vaa ggvGg_
 " 快速替换(viw选中当前词->p粘帖->yiw复制当前词)
-nnoremap vp viwpyiw
+nnoremap graw viwpyiw
 " 选中方法
 nnoremap vaf V$%
 " 复制方法

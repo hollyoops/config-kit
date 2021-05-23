@@ -21,3 +21,4 @@ let mapleader = " "
 
 nnoremap gh :action QuickJavaDoc<CR>
 nnoremap ge :action ShowErrorDescription<CR>
+nnoremap gi :action GotoImplementation<CR>

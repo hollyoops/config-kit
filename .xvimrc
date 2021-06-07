@@ -33,14 +33,6 @@ i kd <ESC>
 inoremap <C-a> <C-o>^
 " ctrl+e 行尾
 inoremap <C-e> <C-o>$
-" ctrl+h 左
-inoremap <C-h> <Left>
-" ctrl+l 右
-inoremap <C-l> <Right>
-" ctrl+j 下
-inoremap <C-j> <Down>
-" ctrl+k 上
-inoremap <C-k> <Up>
 " ctrl+d 删除光标前的字符
 inoremap <C-d> <BS>
 " ctrl+f 删除光标后字符

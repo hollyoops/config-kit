@@ -11,7 +11,7 @@ set ruler
 " set clipboard=unnamed
 set number
 " 开启相对行号
-set relativenumber
+; set relativenumber
 set colorcolumn=+1
 " 分隔窗口在当前窗口右边/下边
 set splitright

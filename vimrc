@@ -1,5 +1,4 @@
 set number
-set relativenumber
 set colorcolumn=+1
 set showmatch
 set hlsearch
@@ -26,10 +25,5 @@ inoremap <C-d> <DEL>
 nnoremap <C-A-f> <ESC>wi
 nnoremap <C-A-b> <ESC>bi
 
-vnoremap <C-a> <ESC>v^
-vnoremap <C-e> <ESC>v$
-vnoremap <C-b> <Left>
-vnoremap <C-f> <Right>
-vnoremap <C-h> c
 vnoremap < <gv
 vnoremap > >gv

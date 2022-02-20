@@ -20,16 +20,6 @@ function move_mouse_to_next_monitor()
     hs.mouse.setAbsolutePosition(center)
 end
 
--- Move Mouse to center of next Monitor
-function move_mouse_to_next_monitor()
-    local screen = hs.mouse.getCurrentScreen()
-    local nextScreen = screen:next()
-    local rect = nextScreen:fullFrame()
-    local center = hs.geometry.rectMidPoint(rect)
-    -- hs.mouse.setRelativePosition(center, nextScreen)
-    hs.mouse.setAbsolutePosition(center)
-end
-
 function move_window_center()
     local f = win:frame()
     local screen = win:screen()

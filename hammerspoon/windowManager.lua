@@ -93,16 +93,14 @@ end
 function This.setup()
     local window = {"cmd", "alt", "ctrl"}
     hs.hotkey.bind(window, 'n', move_window_to_next_monitor)
-    hs.hotkey.bind(window, 'f', focus_top_most_window)
-    hs.hotkey.bind({"alt"}, '`', move_mouse_to_next_monitor)
-    hs.hotkey.bind(window, "Left", move_window_left)
+    hs.hotkey.bind(window, "h", move_window_left)
     -- 屏幕右半部分
-    hs.hotkey.bind(window, "Right", move_window_right)
+    hs.hotkey.bind(window, "l", move_window_right)
     -- 屏幕上半部分
-    hs.hotkey.bind(window, "Up", move_window_up)
+    hs.hotkey.bind(window, "k", move_window_up)
 
     -- 屏幕下半部分
-    hs.hotkey.bind(window, "Down", move_window_down)
+    hs.hotkey.bind(window, "j", move_window_down)
 
     -- 居中
     hs.hotkey.bind(window, "C", move_window_center)

@@ -5,9 +5,23 @@ function move_window_to_next_monitor()
     app:moveToScreen(app:screen():next(), true, true)
 end
 
-function focus_top_most_window()
-    local app = hs.window.frontmostWindow()
-    app:focus()
+function get_window_under_mouse()
+    local mousePos = hs.geometry.new(hs.mouse.getAbsolutePosition())
+    local mouseScreen = hs.mouse.getCurrentScreen()
+
+    return hs.fnutils.find(hs.window.orderedWindows(), function(w)
+        return mouseScreen == w:screen() and w:isStandard() and (not w:isFullScreen())
+        -- return mouseScreen == w:screen() and w:isStandard() and (not w:isFullScreen()) and mousePos:inside(w:frame())
+    end)
+end
+
+function focus_top_window_by_mouse()
+    local target = get_window_under_mouse()
+    if (target) then
+        target:focus()
+    else
+        hs.window.frontmostWindow():focus()
+    end
 end
 
 -- Move Mouse to center of next Monitor
@@ -18,6 +32,11 @@ function move_mouse_to_next_monitor()
     local center = hs.geometry.rectMidPoint(rect)
     -- hs.mouse.setRelativePosition(center, nextScreen)
     hs.mouse.setAbsolutePosition(center)
+end
+
+function focus_next_monitor_top_window()
+    move_mouse_to_next_monitor()
+    focus_top_window_by_mouse()
 end
 
 function move_window_center()
@@ -93,6 +112,8 @@ end
 function This.setup()
     local window = {"cmd", "alt", "ctrl"}
     hs.hotkey.bind(window, 'n', move_window_to_next_monitor)
+    hs.hotkey.bind(window, 'f', focus_top_window_by_mouse)
+    hs.hotkey.bind({"alt"}, 'tab', focus_next_monitor_top_window)
     hs.hotkey.bind(window, "h", move_window_left)
     -- 屏幕右半部分
     hs.hotkey.bind(window, "l", move_window_right)

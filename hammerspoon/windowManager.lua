@@ -21,6 +21,7 @@ function move_mouse_to_next_monitor()
 end
 
 function move_window_center()
+    local win = hs.window.focusedWindow()
     local f = win:frame()
     local screen = win:screen()
     local max = screen:frame()
@@ -46,6 +47,7 @@ function move_window_left()
 end
 
 function move_window_right()
+    local win = hs.window.focusedWindow()
     local f = win:frame()
     local screen = win:screen()
     local max = screen:frame()
